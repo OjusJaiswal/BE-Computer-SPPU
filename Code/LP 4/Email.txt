@@ -1,0 +1,297 @@
+Delivered-To: ojusjaiswal2001@gmail.com
+Received: by 2002:aa6:c24a:0:b0:226:cb11:f76 with SMTP id f10csp415346lkp;
+        Wed, 26 Oct 2022 08:22:54 -0700 (PDT)
+X-Google-Smtp-Source: AMsMyM55ztZEzlKW6q8Km25khTaPCykB9d0w2hob4iTjYMVXU05/4qmT6UcVf+czTN3ap3s0F8lm
+X-Received: by 2002:a65:5886:0:b0:439:8dd3:18d4 with SMTP id d6-20020a655886000000b004398dd318d4mr37805520pgu.430.1666797773753;
+        Wed, 26 Oct 2022 08:22:53 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1666797773; cv=none;
+        d=google.com; s=arc-20160816;
+        b=jvoQSHfuyGA1lvCgXBmEvwRMkm57Vb0OjkXiZB7FtE17pn+oX3BR/6F1fF+FWn7SVl
+         vSSGQcmmLLe82VGVLoz+5302sFFOrruFZ5+TPX6FbyEmb8AyPhiZ4S3oDwT0qZKYVm2h
+         cEnRD3qiBpxI+L9T5V4BwJ+jtQrZDybwmGuNsaEgyRvzJpsK1KoU69mkgJLZs6NWUerF
+         uIURVCunAzfezoifu6lSdRlzJPbRsBL5GyKG/WZkfX4C6iqQztOlRuZO88ShC2horuW0
+         1LBn/pj7ox3d7YJ5M9kI2I9DJNxvYwG1sI3ETSwhwkFGdVotizzRt6EfCjTmaFKXTypS
+         I4jQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:mail_type:subject:message-id:mime-version:from:date
+         :content-transfer-encoding:dkim-signature:dkim-signature;
+        bh=LE+F0jncevJdYc0PmJVVDOF9i5O1EX1Z8dr0dDbTrF8=;
+        b=y0OlLULnsEZVxAXIYHFTG1lLgEuaKXnNzoVU/899eBm/9EluS6Nl763ufOC/4VVhQj
+         fbDaNdlrwzuiBhCDrmH00CFOuBbXZunfFsflksOxJCGsuzekeWqxsF9aqWESXnTUO6qb
+         iFlB13AlqqctQ06SWMbyYakvUOT2qqj0ed43tBxU5J5HlCMD5LLkY4wwNV7hU4t/pzZr
+         zKXw6JVO0iwi+TWzt8vveaPyXVtkEYySeaCYyoNyIh+BYhb4v/mbzzCtlLtWHv3SFs5Y
+         THnjxbmFLBPzGAKbYlvoh67iuXnNYU7kb9QUbfomoelv/gymSUl6xueLlQHvDoLw+VK5
+         Hn7Q==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@e.udemymail.com header.s=s1 header.b=CO+AQhZ2;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=w5coQmd4;
+       spf=pass (google.com: domain of bounces+7354-a0f3-ojusjaiswal2001=gmail.com@em5702.e.udemymail.com designates 149.72.46.199 as permitted sender) smtp.mailfrom="bounces+7354-a0f3-ojusjaiswal2001=gmail.com@em5702.e.udemymail.com"
+Return-Path: <bounces+7354-a0f3-ojusjaiswal2001=gmail.com@em5702.e.udemymail.com>
+Received: from o7.e.udemymail.com (o7.e.udemymail.com. [149.72.46.199])
+        by mx.google.com with ESMTPS id f15-20020a170902ce8f00b001853a1fddecsi7991553plg.403.2022.10.26.08.22.53
+        for <ojusjaiswal2001@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Wed, 26 Oct 2022 08:22:53 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+7354-a0f3-ojusjaiswal2001=gmail.com@em5702.e.udemymail.com designates 149.72.46.199 as permitted sender) client-ip=149.72.46.199;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@e.udemymail.com header.s=s1 header.b=CO+AQhZ2;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=w5coQmd4;
+       spf=pass (google.com: domain of bounces+7354-a0f3-ojusjaiswal2001=gmail.com@em5702.e.udemymail.com designates 149.72.46.199 as permitted sender) smtp.mailfrom="bounces+7354-a0f3-ojusjaiswal2001=gmail.com@em5702.e.udemymail.com"
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=e.udemymail.com; h=content-transfer-encoding:content-type:from:mime-version:subject: x-feedback-id:to:cc; s=s1; bh=LE+F0jncevJdYc0PmJVVDOF9i5O1EX1Z8dr0dDbTrF8=; b=CO+AQhZ28xVoq8HvN57Is1bC+nXXym/1zTd/Q7XmQZTCF0MEJpYdcBfVPsXMtQ7kSUPi BRuZjaal+kCkZk/S4lGhsF6/zJfmqkYlADUrbZsSz1TZe8sEvVhyzyRS/5nU98s5i2LHj4 xSWHGo/19c7ZJXW/wshvIe/B8rv4xMFsJDVecvuVgutkWsXY3DwaKefgeuizLW8yhpwiWp B8x3QR07tvTiGiGWtqMGtu652rCBnPngJeA6vyq8VjBD7POAY29CPviGzYXOOgHLiQI2tu TdxrSg8EIARtnqTKok7TgflZqIkFPpiy+0S0MJ+43xDE+GKma+clUmP5Tw8sging==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info; h=content-transfer-encoding:content-type:from:mime-version:subject: x-feedback-id:to:cc; s=smtpapi; bh=LE+F0jncevJdYc0PmJVVDOF9i5O1EX1Z8dr0dDbTrF8=; b=w5coQmd4CIUyyF4LwphbFPSCEuTQ9NLHDI1BkpR7kH6YdHvLiOfr1jVEMkcmz6J36oEn m+WYnjL65gOi52uY6PFblkqpgii6oCsL/Pvt/Xez3Y1OKT3LYmdZidk1Y+pz7VxCIgk09U d7TAHffHFOxW6IhW0qUgM9IciQKqtYy54=
+Received: by filterdrecv-56995965bd-nq2qg with SMTP id filterdrecv-56995965bd-nq2qg-1-635950CC-95
+        2022-10-26 15:22:53.039733268 +0000 UTC m=+2482211.612724529
+Received: from NzM1NA (unknown) by geopod-ismtpd-1-0 (SG) with HTTP id Mp2DUIhZTnmCI4LRo5FGSA Wed, 26 Oct 2022 15:22:52.908 +0000 (UTC)
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Date: Wed, 26 Oct 2022 15:22:53 +0000 (UTC)
+From: "Udemy Instructor: Andy Bek" <no-reply@e.udemymail.com>
+Mime-Version: 1.0
+Message-ID: <Mp2DUIhZTnmCI4LRo5FGSA@geopod-ismtpd-1-0>
+Subject: NEW Course On SQL With Python!
+mail_type: new-course-promotion
+X-Feedback-ID: 7354:SG
+X-SG-EID: WpDZB/9tNcUNffiUzh3F7doOa2MU/iwbwjKsQQ7y3rvEOvMBLBfZB/b6JUEPfV+qNQtIh3nzzOiV+hht26lg0gsZ6e32J9T1K6KDJaziIhr6fPbIreA5yIaygxiEiu8wO98jM2O+av020X/Ql+aAvW5fPPChjYqcXAGuyISU7VEOrifcBADwuFDrO+nNarat6cKtlBtm01h7jwWKhs++8aNmlktoJeQzQtZrZXM3aiGJb5eybKpN6hBiazYt1EGFE/suqWHNdig58TNJ5JgdbA==
+X-SG-ID: N2C25iY2uzGMFz6rgvQsbyyzsFY3VfavMyXI4tum16QID1/gFRTB+6KZteS30j4/CGxxr9Dj9azbJV74c0KR1kZaJnv2NtGRX25+fA8G3g1I9/+AWDLDgXgpPK931l/HI5tdNI+mG6EyHsadwZTvM28psJxfjmqoy+j1+EXKRTOPEZyVHM25CxbUbFr0wk55lw1JQL4L2F4EOtJSvJEDFMl8QAcE/34VRwByba0aSlSouCacq+EQGAPDZUZRSD+rxGseLBIo/p6KJ4FmjlJa7w==
+To: ojusjaiswal2001@gmail.com
+X-Entity-ID: 0uUmzHwfHa8Hfnoi4jOYfQ==
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/htm=
+l4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv=3D"Content-type" content=3D"text/html; charset=3Du=
+tf-8">
+        <meta name=3D"x-apple-disable-message-reformatting">
+
+        <title>Udemy</title>
+       =20
+       =20
+        <style>
+            #udemy-email img {
+                max-width:100%;
+                height:auto;
+            }
+
+            #udemy-email p {
+                color:#1C1D1F;
+                margin:0 0 8px 0;
+            }
+
+           =20
+            #udemy-email a {
+                color:#5624D0;
+                text-decoration:underline;
+            }
+
+            #udemy-email ul,
+            #udemy-email ol {
+                margin:0 0 8px 24px;
+                padding:0;
+            }
+
+            #udemy-email li {
+                margin:0 0 4px 0;
+                padding:0 0 0 8px;
+            }
+
+            #udemy-email hr {
+                border:0;
+                border-top:1px solid #CCCCCC;
+                margin:16px 0 16px 0;
+            }
+
+           =20
+        </style>
+    </head>
+    <body style=3D"color:#1C1D1F; margin:0; font-family:'SF Pro Text', -app=
+le-system, BlinkMacSystemFont, Roboto, 'Segoe UI', Helvetica, Arial, sans-s=
+erif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size:1=
+6px; font-weight:400; line-height:1.4">
+        <table id=3D"udemy-email" width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" style=3D"background-color:#F7F9FA; padding:24px">
+            <tr>
+                <td>&nbsp;</td>
+                <td width=3D"600">
+                    <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"=
+0" style=3D"background-color:#FFF">
+                       =20
+                            <tr>
+                                <td style=3D"border-bottom:1px solid #CCCCC=
+C; padding:24px">
+                                   =20
+    <p style=3D"margin:0">
+        <b>
+           =20
+                New Promotional Announcement
+           =20
+        </b>
+    </p>
+
+                                </td>
+                            </tr>
+                       =20
+                       =20
+                            <tr>
+                                <td style=3D"padding:24px 24px 0 24px">
+                                   =20
+                                    <!-- No greeting -->
+                                   =20
+    <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+        <tr>
+            <td width=3D"48" style=3D"vertical-align:middle">
+                <img src=3D"https://img-c.udemycdn.com/user/50x50/103715210=
+_906e_2.jpg" width=3D"48" alt=3D""
+                     style=3D"border-radius:50%; display:block; object-fit:=
+cover">
+            </td>
+            <td style=3D"padding:0 0 0 16px; vertical-align:middle">
+               =20
+                                       =20
+                                            <p style=3D"margin-bottom:0">
+                                                <a href=3D"" style=3D"text-=
+decoration:none; color:#1C1D1F">Hi Ojus P., an announcement has been made f=
+rom Andy, instructor of </a><a href=3D"https://e2.udemymail.com/ls/click?up=
+n=3DZF3sOyS2SxEPIoSZT6Aoc-2BEAPso9xRA49IDbkpAnXiniVc29o3m-2FQUftnofcPYk0MGq=
+kwv5-2BZ44t5NVkO70dDexhg-2FBkwUa6JWH7lC600LpRnJi3T-2B7n6dsxbdpz4p-2BXL4g76l=
+Y67GbNg4n0ke5hT4599bhHdSbu4-2FU1krU8KKHDgfSKEUYU5gejdYTK2TVMc29Me3r1TLoZwe7=
+1x3WYYR1ruZ3fZN00m3B-2Bb-2FtDL6iqOda1KVSV-2FoB8u-2BPs6o3KA3XkcQUz53IkkLMkq9=
+Iy6A-3D-3DqnkR_oeZwtd3Pt3hu8AglNs3Hp0dnkYKiAY7mts-2BCEVHXOYZktfK3rwvfXcBqnJ=
+hTanL0FTRLtdl5u9n8rGOgE7WggH6sEO9wy0mK9cNGKoNPVE45xCl-2FLSJzRxvbTRVHjKgpW5x=
+Qd8tNm3iKHGEwbes8PV8cmjJa14Bl0G8Hzh0l-2BZWp6Oc5gmFEWqhHWeRw-2Fy5dEuscge6YkM=
+mxTYlav-2FMW-2FpgCXCUdCBVTCUIE3WK5ygKjGPIs1gbGmxXbI-2FgZjzDxRpD1cNQ4TUMK0oN=
+6A-2B8gP2HaFSkBk7sxFRZzFROdrpdycTsZnDFKC4IQa8t72R5cAQpkjuJygkHDg9s-2BB69z6f=
+IRgGMwAHpk6TvigzF0tQ7Oz51gTpVB4oJbdm5Hnej1f5yAOmy3F4e-2F0nIGMf2NQ35KofaWNc9=
+BxWw9xZz3eg-2BdhW8riGWom0l3ahBXDYda3Xi5N2YPIuqUmG4-2FwKJEvw-3D-3D">The Ulti=
+mate Pandas Bootcamp: Advanced Python Data Analysis</a><a href=3D"" style=
+=3D"text-decoration:none; color:#1C1D1F">.</a>
+                                            </p>
+                                       =20
+                                   =20
+            </td>
+        </tr>
+    </table>
+
+                                </td>
+                            </tr>
+                       =20
+
+                       =20
+    <tr><td style=3D"padding:24px 0 0 0"></td></tr>
+    <tr>
+        <td style=3D"border-top:1px solid #CCCCCC; padding:24px 24px 0 24px=
+">
+             <p>Hi folks,</p><p>I'll keep this short. I've launched a new c=
+ourse on working with <strong>SQL in Python</strong>.</p><p>Thanks to your =
+feedback, it offers extensive hands-on practice. We build 3 projects of inc=
+reasing complexity using 3 SQL dialects: <strong>SQLite</strong>, <strong>M=
+ySQL</strong>, and <strong>PostgreSQL</strong>, all starting from scratch.<=
+/p><p>The capstone project is a <strong>full-fledged API </strong>with user=
+ registration and authentication, which we deploy to the web for free.</p><=
+p>Please take a moment to check out the intro below.</p><p><a href=3D"https=
+://e2.udemymail.com/ls/click?upn=3DZF3sOyS2SxEPIoSZT6Aoc-2BEAPso9xRA49IDbkp=
+AnXilZQJTDMWJke-2BjGorHQD-2FyxZfPOvlpd-2F3nVjJ6yLSn9CThGFYQBLATZppflPD-2BGf=
+H05gzC7JzIQ2qp56vHTVtkhf9loJ8r7veaYv7Don6lv7m3-2FE-2Bun5quzgnzqJywi5hoZAd-2=
+BbO-2FqwN4WMabpR2npyM5I1cQD2jF3tRNLUjNhrPiBG2lgQS-2FMdacfcUK4eBXRvJf1Pu1dRm=
+suY7iv7gCWVpG3rA3agL4JllRoznnCYms0ltxhQzPYZ6KaeMXX-2FHa4-3D8zxU_oeZwtd3Pt3h=
+u8AglNs3Hp0dnkYKiAY7mts-2BCEVHXOYZktfK3rwvfXcBqnJhTanL0FTRLtdl5u9n8rGOgE7Wg=
+gH6sEO9wy0mK9cNGKoNPVE45xCl-2FLSJzRxvbTRVHjKgpW5xQd8tNm3iKHGEwbes8PV8cmjJa1=
+4Bl0G8Hzh0l-2BZWp6Oc5gmFEWqhHWeRw-2Fy5dEuscge6YkMmxTYlav-2FMW-2FpgCXCUdCBVT=
+CUIE3WK5ygKjGPIs1gbGmxXbI-2FgZjzDxRpD1cNQ4TUMK0oN6A-2B8gPyeE4pnFZusG3Ncqd4r=
+U3x7Ief0hpo0ITwB1A-2BS1f8q6ihxI610wb0W-2BBg7nKF6wVn5XEumKk-2FWDq2QTjPJ1yc5G=
+k3IyTfudl8aZIY4tbaBIujqPby9Cv758kgyzgFKFKBY8p3AfRCcgavi6-2Frm8hDJssZlWReKgH=
+Dmmc5-2BTyKz-2BK8jejdYKADhAf1O6y2YOMw-3D-3D" rel=3D"noopener noreferrer" ta=
+rget=3D"_blank">LINK w/ 90% OFF COUPON DISCOUNT!</a></p><p>The above coupon=
+ <strong>guarantees</strong> the best price Udemy currently offers and will=
+ expire in 5 days. </p><p>Best,</p><p>Andy</p>
+        </td>
+    </tr>
+
+
+                       =20
+                           =20
+                       =20
+
+                       =20
+
+                        <tr>
+                            <td style=3D"padding:48px 24px 0 24px">
+                               =20
+                               =20
+                                <p style=3D"font-family:'SF Pro Text', -app=
+le-system, BlinkMacSystemFont, Roboto, 'Segoe UI', Helvetica, Arial, sans-s=
+erif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size:1=
+2px; font-weight:400; line-height:1.4; color:#6A6F73; margin:0">
+                                   =20
+                                        Delivered by Udemy 600 Harrison Str=
+eet, 3rd Floor, San Francisco, CA 94107.
+                                   =20
+                                   =20
+                                       =20
+                                           =20
+                                                You may <a href=3D"https://=
+e2.udemymail.com/ls/click?upn=3DZF3sOyS2SxEPIoSZT6AocxZU-2BXw2691MgmMaElQcj=
+yu1WEIHIp7-2F2TbKmnkn5th7viLk-2BSzrqzSU3QppUnV-2BlsPEiNqYbalo2R-2FTnSg2rQIT=
+GZmPy5P98s1pmy6RABvqfRCw1xwKmsVr8D99QbuL11eBycV9DfMxiUbXUbT6kIyfKHs2GYirb9I=
+Qp4ETGLDt-2FlHMkHBOM6s7cW0Oyg9PDi-2BoOOA8z34M2sNxRbkicVK7YzVzEJic-2FPUikyAc=
+twclnePwK0W3JhQOvF7mJhyQJ0RxmWKl9jY-2BfgKSIP5YW-2FS2vQYDeW3mTPgiYcVCudRHHcs=
+TFiudX-2FvKG-2FSUagSVNF4Qb24zqnyq9DoFx7GEU-2Fg0j0V8-2BpMkcZMXN7ZLp294bW3fro=
+cCJnjnlWFQSOQqOALM-2B4ME4Atmlh0ZGfqbX8d3cv1XZbQNxc-2FddE-2Fs65dAdneQF2vrM0h=
+lJt3zsE2Il-2BDBL2kdlZi9GmJ-2BG-2FLIiSzvM8A96MCJeD-2FOVdRcjdS5Lvqo_oeZwtd3Pt=
+3hu8AglNs3Hp0dnkYKiAY7mts-2BCEVHXOYZktfK3rwvfXcBqnJhTanL0FTRLtdl5u9n8rGOgE7=
+WggH6sEO9wy0mK9cNGKoNPVE45xCl-2FLSJzRxvbTRVHjKgpW5xQd8tNm3iKHGEwbes8PV8cmjJ=
+a14Bl0G8Hzh0l-2BZWp6Oc5gmFEWqhHWeRw-2Fy5dEuscge6YkMmxTYlav-2FMW-2FpgCXCUdCB=
+VTCUIE3WK5ygKjGPIs1gbGmxXbI-2FgZjzDxRpD1cNQ4TUMK0oN6A-2B8gP7ptVWKkD8ZB9p4h3=
+Hk8XqqxPISp2nc6qOHQI6QuAMlYGV87mhTv-2FHeKrV8JsBOFdbeb2L2YcKvmW5rChFEOpzvzTu=
+o2F43l9qBa89wG7eCG0qiLNCazSIxY2hr-2B-2F1WMBLaAfNgmTJsARxhYj5GD-2FDSOvmVaaG1=
+j93Ev1I5LNv9H42EvQRNCwo9zxZ8JfW5MCA-3D-3D" style=3D"color:#6A6F73">unsubscr=
+ibe</a> if you prefer not to receive messages like these.
+                                           =20
+                                       =20
+                                   =20
+                                   =20
+                                       =20
+                                           =20
+                                                If something isn't right, p=
+lease <a href=3D"https://e2.udemymail.com/ls/click?upn=3DZF3sOyS2SxEPIoSZT6=
+Aoc47BwcPaTgb-2BQQuyBM-2FWMDRLaPNWZPuYNZNbGBIxDD3ZcEWO-2B4pF2g2oSOb-2BV-2Fo=
+h7zOUew1UkZd8Ixv15g2-2BxiXQ7cY9jBfiCvwxIF6RrhgW3TJxj-2B7ps8w8JSV0k9Af7K-2BS=
+-2FzdMsUY4yLz-2BLgSiy9b23Nh0-2BjBP6DObNnGfd3AA4-2Fd68efAOYDNhrdxYBA9DgSig4R=
+o-2B44-2B8sysH9FZWKtCKZ1PJPrT4TnXoalHN-2FePlTEnMzevzHz6xBlHp4zfpO2Grqt-2F75=
+W8PbMcbRWDykU-3DrP0__oeZwtd3Pt3hu8AglNs3Hp0dnkYKiAY7mts-2BCEVHXOYZktfK3rwvf=
+XcBqnJhTanL0FTRLtdl5u9n8rGOgE7WggH6sEO9wy0mK9cNGKoNPVE45xCl-2FLSJzRxvbTRVHj=
+KgpW5xQd8tNm3iKHGEwbes8PV8cmjJa14Bl0G8Hzh0l-2BZWp6Oc5gmFEWqhHWeRw-2Fy5dEusc=
+ge6YkMmxTYlav-2FMW-2FpgCXCUdCBVTCUIE3WK5ygKjGPIs1gbGmxXbI-2FgZjzDxRpD1cNQ4T=
+UMK0oN6A-2B8gP0TaHqroE8qVxpO4FqGX8HOsiyHqZ9D2St0eo8sOSR2S-2FgT9CUz3-2F5av2F=
+AWvtAQ8nMbbG4wc-2FmoPDLSiHio5LjinnOVLqFxTIKyjKlXs4rH1aObsw5-2B-2FUkkbay9pBb=
+uiIW73R03QOFC3b4Zv9c9D78AoxuUJz0-2FlR-2FXdLriDiVT2AW-2FB9anpjZ48cuot0Vpag-3=
+D-3D" style=3D"color:#6A6F73">report abuse</a>.
+                                           =20
+                                       =20
+                                   =20
+                                </p>
+                            </td>
+                        </tr>
+                       =20
+                        <tr>
+                            <td style=3D"padding:24px 0 0 0"></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    <img src=3D"https://e2.udemymail.com/wf/open?upn=3DLPJ4EO7MihrXySwTZWAL=
+fReoYpuY6dusufwviWotVY-2BDef-2Fi2PElxOcrvtueY6Pzrdlq5FdU-2BWp1EAsN-2FAP7NT4=
+88F8QBSZfuuUCc1NohjIv8PdIJY1LBytH-2BRS5J6wQXKASJEsoyIJnZQ-2BOqvoAdpcFwOmFFZ=
+UrJRypfN-2F8xIC0gK-2FZvi8O7o0MYXe2LxPHSbne1oIuJWZLxsjKUzdPBx7q-2BjGaQ-2BgN6=
+jBwWxmdejy1ClaTGayEwCR-2BHvWaWlIxMgO77O70KSP2mdDeZDIshKS-2BXmlEgeSA85Yc0HM0=
+zYQsI3l2N09Ts-2FTTq2sXUFOp4ik5gkEX2DSWq2G26I1qpq4lIw6G47lFs5QaZ2ipmQ-2BLDyE=
+gDla1CE6Zn3GfiaxbjEYgUDrpFvYB0ZhdsrPeu6ZNnFVGLHFe8pNsMqNrndvEHSGAICwGzi5-2B=
+X3O6S3Z8E2BuCdgwSx56HiUP517khVZi2rFfAoGpDCj4m-2FzyyZ4-3D" alt=3D"" width=3D=
+"1" height=3D"1" border=3D"0" style=3D"height:1px !important;width:1px !imp=
+ortant;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !i=
+mportant;margin-right:0 !important;margin-left:0 !important;padding-top:0 !=
+important;padding-bottom:0 !important;padding-right:0 !important;padding-le=
+ft:0 !important;"/></body>
+</html>

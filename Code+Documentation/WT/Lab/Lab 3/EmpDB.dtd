@@ -1,0 +1,7 @@
+<!ELEMENT Employee(EmpID,Name,Gender,Age,Address,Salary)>
+<!ELEMENT EmpID(#PCDATA)>
+<!ELEMENT Name(#PCDATA)>
+<!ELEMENT Gender(#PCDATA)>
+<!ELEMENT Age(#PCDATA)>
+<!ELEMENT Address(#PCDATA)>
+<!ELEMENT Salary(#PCDATA)>

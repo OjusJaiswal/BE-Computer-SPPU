@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="C:\Users\Acer\Downloads\style.xsl"?>
+<!DOCTYPE catalog [
+<!ELEMENT catalog (cd)>
+<!ELEMENT cd (Emp_Name,Address,Age,company,Experience)>
+<!ELEMENT Emp_Name (#PCDATA)>
+<!ELEMENT Address (#PCDATA)>
+<!ELEMENT Age (#PCDATA)>
+<!ELEMENT company (#PCDATA)>
+<!ELEMENT Experience (#PCDATA)>
+]>
+<catalog>
+  <cd>
+    <Emp_Name>Rohan</Emp_Name>
+    <Address>Ravet</Address>
+    <Age>26</Age>
+    <company>Infosys</company>
+    <Experience>10 years</Experience>
+  </cd>
+  <cd>
+    <Emp_Name>Riya</Emp_Name>
+    <Address>Akurdi</Address>
+    <Age>25</Age>
+    <company>TCS</company>
+    <Experience>9 year</Experience>
+    
+  </cd>
+  <cd>
+    <Emp_Name>Meena</Emp_Name>
+    <Address>Chinchwad</Address>
+    <Age>30</Age>
+    <company>RCA</company>
+    <Experience>11 year</Experience>
+
+  </cd>
+  <cd>
+    <Emp_Name>Meena</Emp_Name>
+    <Address>Chinchwad</Address>
+    <Age>30</Age>
+    <company>RCA</company>
+    <Experience>11 year</Experience>
+    
+  </cd>
+  <cd>
+</catalog>

@@ -1,0 +1,36 @@
+create table details(Wing varchar(20),Flat_No number ,Owner_Name varchar(20),Email_Id varchar(20),Mobile_No number ,Payable number);
+select * from details;
+insert into details values('B',100,'Ankit','abc@gmail.com',123456789,1500);
+insert into details values('D',110,'Rohan','xyz@gmail.com',123456789,4500);
+
+
+
+
+
+create table login (Email varchar(20),Password varchar(20));
+insert into login values('abc@gmail.com','123abc');
+
+insert into login1 values('def',1);
+
+
+select * from login;
+
+
+
+select * from login1;
+insert into login1 values('pqr');
+Select Email from login1 where Email='abc';
+
+
+create table log (name varchar(20));
+insert into log values('pqr');
+
+create table data (id number,name varchar(20),age number);
+insert into data values(1,'kavita',20);
+insert into data values(2,'mamta',22);
+
+insert into data values(3,'ankit',16);
+
+insert into data values(4,'riya',20);
+select * from data;
+select * from data;

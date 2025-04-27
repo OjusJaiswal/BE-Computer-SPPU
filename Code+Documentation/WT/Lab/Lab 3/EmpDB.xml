@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE EmpDB SYSTEM "EmpDB.dtd">
+<?xml-stylesheet type="text/xsl" href="EmpDB.xsl"?>
+
+<EmpDB>
+	
+	<Employee EmpID="1">
+		<Name>ABC</Name>
+		<Gender>Male</Gender>
+		<Age>30</Age>
+		<Address>DEF</Address>
+		<Salary>50000</Salary>
+	</Employee>
+		
+	<Employee EmpID="2">
+		<Name>GHI</Name>
+		<Gender>Female</Gender>
+		<Age>26</Age>
+		<Address>JKL</Address>
+		<Salary>30000</Salary>
+	</Employee>
+	
+	<Employee EmpID="3">
+		<Name>MNO</Name>
+		<Gender>Male</Gender>
+		<Age>35</Age>
+		<Address>PQR</Address>
+		<Salary>70000</Salary>
+	</Employee>
+	
+	<Employee EmpID="4">
+		<Name>STU</Name>
+		<Gender>Male</Gender>
+		<Age>50</Age>
+		<Address>VWX</Address>
+		<Salary>120000</Salary>
+	</Employee>
+	
+	<Employee EmpID="5">
+		<Name>YZA</Name>
+		<Gender>Female</Gender>
+		<Age>39</Age>
+		<Address>BCD</Address>
+		<Salary>80000</Salary>
+	</Employee>
+	
+</EmpDB>
